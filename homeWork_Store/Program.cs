@@ -11,21 +11,21 @@ namespace homeWork_Store
         static void Main(string[] args)
         {
             int money;
-            int coutCrystal;
+            int amountCrystals;
             int crystalPrice = 34;
-            bool enougtMoney;
+            bool canBuyCrystals;
 
             Console.WriteLine($"Добро пожаловать в магазин кристалов. Курс одного кристалла сегодны {crystalPrice}");
             Console.Write("Сколько золата у вас есть: ");
             money = Convert.ToInt32(Console.ReadLine());
             Console.Write("Склдько кристалов вы хотике купить: ");
-            coutCrystal = Convert.ToInt32(Console.ReadLine());
+            amountCrystals = Convert.ToInt32(Console.ReadLine());
             
-            enougtMoney = money > (crystalPrice * coutCrystal);
-            coutCrystal *= Convert.ToInt32(enougtMoney);
-            money -= coutCrystal * crystalPrice;
+            canBuyCrystals = money > (crystalPrice * amountCrystals);
+            amountCrystals *= Convert.ToInt32(canBuyCrystals);
+            money -= amountCrystals * crystalPrice;
 
-            Console.WriteLine($"Количество кристалов: {coutCrystal}. Количесто золота: {money}");
+            Console.WriteLine($"Количество кристалов: {amountCrystals}. Количесто золота: {money}");
             Console.ReadKey();
             
 
